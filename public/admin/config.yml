@@ -3,7 +3,7 @@ backend:
   repo: creadoras-de-exito/team-portal
   branch: main
   auth_type: implicit
-  app_id: Ov23liyU1lCrWbyN5toJ
+  app_id: Ov23liBSRSBnxk8YsuSN
 
 media_folder: 'public/uploads'
 public_folder: '/uploads'
