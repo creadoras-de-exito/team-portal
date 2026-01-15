@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main # branch where CMS commits go
+
+media_folder: "public/uploads" # folder in your repo for uploaded images/files
+public_folder: "/uploads" # URL path to media
+
+site_url: "https://creadoras-de-exito-portal.netlify.app"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/home.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
