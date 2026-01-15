@@ -11,7 +11,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "content/home.md"
+      - file: "content/index.md"
         label: "Home Page"
         name: "home"
         fields:
