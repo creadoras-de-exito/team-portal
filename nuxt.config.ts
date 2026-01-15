@@ -1,14 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2025-07-15",
+  modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/image', '@nuxt/ui'],
+
+  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
   runtimeConfig: {
     public: {
       supabaseUrl: process.env.SUPABASE_URL,
-      supabasePublishableKey: process.env.SUPABASE_PUBLISHABLE_KEY,
-    },
+      supabasePublishableKey: process.env.SUPABASE_PUBLISHABLE_KEY
+    }
   },
 
-  modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/image", "@nuxt/ui"],
-});
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    }
+  }
+})
