@@ -1,9 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/image', '@nuxt/ui'],
-
-  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+
+  css: ['~/assets/css/main.css'],
 
   runtimeConfig: {
     public: {
@@ -11,6 +11,8 @@ export default defineNuxtConfig({
       supabasePublishableKey: process.env.SUPABASE_PUBLISHABLE_KEY
     }
   },
+
+  compatibilityDate: '2025-07-15',
 
   eslint: {
     config: {
