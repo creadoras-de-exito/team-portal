@@ -1,7 +1,5 @@
 <script setup>
-const { data: home } = await useAsyncData(() =>
-  queryCollection("content").path("/").first()
-);
+const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first())
 </script>
 
 <template>
@@ -9,11 +7,9 @@ const { data: home } = await useAsyncData(() =>
     <h1>{{ home.meta.heroTitle }}</h1>
     <p>{{ home.meta.heroSubtitle }}</p>
 
-    <img
-      v-if="home.meta.heroImage"
-      :src="home.meta.heroImage"
-      alt="Hero image"
-      style="max-width: 100%"
-    />
+    <img v-if="home.meta.heroImage" :src="home.meta.heroImage" alt="Hero image" style="max-width: 100%" />
+    <div class="bg-surface p-4">
+      <UButton color="primary">It works</UButton>
+    </div>
   </main>
 </template>
