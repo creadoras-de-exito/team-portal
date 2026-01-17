@@ -15,6 +15,34 @@
 //   }
 //   return data;
 // });
+
+useHead({
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'author', content: 'Travis Nickels' },
+    { name: 'robots', content: 'index, follows' }
+  ],
+  link: [{ rel: 'icon', type: 'image/x-icon', href: `favicon.ico` }],
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
+
+const title = 'Creadoras de Éxito'
+const description = 'Portal oficial del equipo Creadoras de Éxito, con actualizaciones, recursos y anuncios.'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogImage: '',
+
+  twitterCard: 'summary_large_image',
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: ''
+})
 </script>
 
 <template>
