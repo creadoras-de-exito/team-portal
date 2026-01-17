@@ -1,13 +1,31 @@
 <script setup>
 const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first())
+const heroImage = ref('/images/luxury-02.png')
 </script>
 
 <template>
   <main v-if="home">
-    <h1 class="text-4xl font-semibold tracking-tight">{{ home.meta.heroTitle }}</h1>
-    <p>{{ home.meta.heroSubtitle }}</p>
-
-    <img v-if="home.meta.heroImage" :src="home.meta.heroImage" alt="Hero image" style="max-width: 100%" />
+    <UPageHero
+      :title="home.meta.heroTitle"
+      :description="home.meta.heroSubtitle"
+      :links="[
+        {
+          label: '',
+          to: '/',
+          trailingIcon: 'i-lucide-arrow-right',
+          size: 'xl'
+        }
+      ]"
+      class="relative min-h-[70vh]"
+      :ui="{ wrapper: 'relative' }"
+    >
+      <template #top>
+        <div class="absolute inset-0 bg-cover" :style="{ backgroundImage: `url(${heroImage})`, backgroundPosition: 'center calc(50% - 150px)' }" />
+        <div
+          class="absolute inset-0 bg-linear-to-b from-[color-mix(in_oklab,var(--ui-bg)_1%,transparent)] via-[color-mix(in_oklab,var(--ui-bg)_75%,transparent)] to-[color-mix(in_oklab,var(--ui-bg)_1%,transparent)]"
+        />
+      </template>
+    </UPageHero>
     <div class="p-4">
       <UButton color="primary">It works</UButton>
     </div>
