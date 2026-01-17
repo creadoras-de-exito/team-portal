@@ -1,5 +1,5 @@
 ---
-heroTitle: Welcome to Creadoras de Éxito
-heroSubtitle: Your team’s portal for announcements, events, and inspiration. Elena's new site
-heroImage: /uploads/hero.jpg
+heroTitle: Bienvenidos a Creadoras de Éxito
+heroSubtitle: Portal oficial del equipo con actualizaciones, recursos y anuncios.
+heroImage: /images/luxury-02.png
 ---
