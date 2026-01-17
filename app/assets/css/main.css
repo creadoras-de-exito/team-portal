@@ -1,9 +1,127 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
 
-@theme static {
-  --font-sans: 'Public Sans', sans-serif;
+@layer base {
+  body {
+    @apply antialiased text-default bg-surface scheme-light dark:scheme-dark;
+  }
+}
 
+@theme static {
+  --font-sans: Inter, sans-serif;
+  --font-heading: '"Playfair Display", serif';
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Primary color palette */
+  --color-primary: #4b2c52; /* Deep Plum */
+  --ui-primary: var(--color-primary);
+
+  /* Text color palette */
+  --color-text: #2c2c2c; /* Dark Charcoal */
+  --ui-text: var(--color-text);
+
+  /* Accent color palette */
+  --color-accent: #d7a3b0; /* Muted rose */
+  --ui-color-accent: var(--color-accent);
+
+  --color-secondary: #3c6382; /* Champagne */
+  --color-info: #d7a3b0; /* Muted rose */
+  --color-surface: #faf8f5; /* Ivory */
+  --color-card: #ffffff; /* White */
+}
+
+:root,
+.primary-scale {
+  --color-primary-50: #ddd1e0;
+  --color-primary-100: #c2aec6;
+  --color-primary-200: #a58bab;
+  --color-primary-300: #886a8f;
+  --color-primary-400: #6a4b71;
+  --color-primary-500: #4b2c52; /* main brand color - Deep Plum */
+  --color-primary-600: #412248;
+  --color-primary-700: #36193d;
+  --color-primary-800: #2b1131;
+  --color-primary-900: #1f0a23;
+  --color-primary-950: #110514;
+}
+
+:root,
+.secondary-scale {
+  --color-secondary-50: #fefaf8;
+  --color-secondary-100: #fdf7f2;
+  --color-secondary-200: #fbf3ed;
+  --color-secondary-300: #f9f0e9;
+  --color-secondary-400: #f6ece5;
+  --color-secondary-500: #f3e9e2; /* main brand color - Champagne*/
+  --color-secondary-600: #cec4bc;
+  --color-secondary-700: #a89e97;
+  --color-secondary-800: #817973;
+  --color-secondary-900: #5a534f;
+  --color-secondary-950: #322e2c;
+}
+
+:root,
+.background-scale {
+  --color-background-50: #fffefd;
+  --color-background-100: #fefdfb;
+  --color-background-200: #fdfcf9;
+  --color-background-300: #fcfaf8;
+  --color-background-400: #fbf9f6;
+  --color-background-500: #faf8f5; /* main brand color - Ivory */
+  --color-background-600: #d2d0cd;
+  --color-background-700: #aba9a6;
+  --color-background-800: #83817f;
+  --color-background-900: #5b5958;
+  --color-background-950: #333231;
+}
+
+:root,
+.textPrimary-scale {
+  --color-textPrimary-50: #d5d5d5;
+  --color-textPrimary-100: #b3b3b3;
+  --color-textPrimary-200: #919191;
+  --color-textPrimary-300: #707070;
+  --color-textPrimary-400: #4e4e4e;
+  --color-textPrimary-500: #2c2c2c; /* main text color - Dark Charcoal*/
+  --color-textPrimary-600: #252525;
+  --color-textPrimary-700: #1e1e1e;
+  --color-textPrimary-800: #171717;
+  --color-textPrimary-900: #101010;
+  --color-textPrimary-950: #090909;
+}
+
+:root,
+.textSecondary-scale {
+  --color-textSecondary-50: #e4e4e4;
+  --color-textSecondary-100: #cfcfcf;
+  --color-textSecondary-200: #bababa;
+  --color-textSecondary-300: #a5a5a5;
+  --color-textSecondary-400: #8f8f8f;
+  --color-textSecondary-500: #7a7a7a; /* main color - Warm gray*/
+  --color-textSecondary-600: #676767;
+  --color-textSecondary-700: #535353;
+  --color-textSecondary-800: #3f3f3f;
+  --color-textSecondary-900: #2c2c2c;
+  --color-textSecondary-950: #181818;
+}
+
+:root,
+.highlight-scale {
+  --color-highlight-50: #fce7ed;
+  --color-highlight-100: #f8d6df;
+  --color-highlight-200: #f2c7d2;
+  --color-highlight-300: #ebb9c6;
+  --color-highlight-400: #e2adbb;
+  --color-highlight-500: #d7a3b0; /* main highlight color - Muted rose */
+  --color-highlight-600: #b98592;
+  --color-highlight-700: #996874;
+  --color-highlight-800: #784d58;
+  --color-highlight-900: #55333c;
+  --color-highlight-950: #301b21;
+}
+
+:root,
+.green-scale {
   --color-green-50: #effdf5;
   --color-green-100: #d9fbe8;
   --color-green-200: #b3f5d1;
