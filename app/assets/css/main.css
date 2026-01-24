@@ -30,6 +30,23 @@
   --color-card: #ffffff; /* White */
 }
 
+.dark {
+  /* --color-primary: #4ea3ff; */
+  --color-primary: #6cc8a0; /* teal-400 */
+  --color-secondary: #6fa8dc; /* blue-400 */
+  --color-accent: #ffaed5; /* pink-300 */
+  --color-accent2: #22d3ee; /* cyan-400 */
+  --color-soft: #67e8f9; /* cyan-300 */
+  --color-muted: #0891b2; /* cyan-600 */
+
+  --color-future: #a78bfa; /* violet-400 */
+  --color-surface: #0f172a; /* slate-900 */
+  --color-card: #162036; /*111827*/
+  --color-text: #e5e7eb; /* gray-200 */
+  --color-text-secondary: #94a3b8; /* gray-400 */
+  --color-text-muted: #64748b; /* gray-500 */
+}
+
 :root,
 .primary-scale {
   --color-primary-50: #ddd1e0;
