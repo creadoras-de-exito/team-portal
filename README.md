@@ -99,7 +99,7 @@ site_url: 'https://creadoras-de-exito-portal.netlify.app'
 
 1. Push your changes to main branch.
 2. Deploy your site on Netlify.
-3. Open /admin on your site.
+3. Open `/admin` on your site.
 4. Click Login with GitHub → CMS loads → content is editable.
 
 ---
