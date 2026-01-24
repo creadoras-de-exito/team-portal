@@ -2,7 +2,7 @@
 
 <template>
   <main>
-    <h1 class="text-4xl font-semibold tracking-tight">RECOGNITIONS</h1>
+    <h1 class="text-4xl font-semibold tracking-tight">RECONOCIMIENTOS</h1>
     <p>Page under construction.</p>
   </main>
 </template>

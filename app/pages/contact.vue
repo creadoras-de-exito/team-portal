@@ -2,7 +2,7 @@
 
 <template>
   <main>
-    <h1 class="text-4xl font-semibold tracking-tight">CONTACT</h1>
+    <h1 class="text-4xl font-semibold tracking-tight">CONTACTO</h1>
     <p>Page under construction.</p>
   </main>
 </template>

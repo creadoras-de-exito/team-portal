@@ -2,7 +2,7 @@
 
 <template>
   <main>
-    <h1 class="text-4xl font-semibold tracking-tight">NEWS</h1>
+    <h1 class="text-4xl font-semibold tracking-tight">NOTICIAS</h1>
     <p>Page under construction.</p>
   </main>
 </template>

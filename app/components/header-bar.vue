@@ -3,11 +3,11 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 
 const items = ref<NavigationMenuItem[][]>([
   [
-    { label: 'HOME', to: '/' },
-    { label: 'RECOGNITIONS', to: '/recognitions' },
-    { label: 'NEWS', to: '/news' },
-    { label: 'ABOUT', to: '/about' },
-    { label: 'CONTACT', to: '/contact' }
+    { label: 'HOGAR', to: '/' },
+    { label: 'RECONOCIMIENTOS', to: '/recognitions' },
+    { label: 'NOTICIAS', to: '/news' },
+    { label: 'SOBRE', to: '/about' },
+    { label: 'CONTACTO', to: '/contact' }
   ]
 ])
 </script>
