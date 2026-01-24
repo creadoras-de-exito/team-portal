@@ -1,6 +1,5 @@
 <script setup>
 const { data: home } = await useAsyncData(() => queryCollection('content').path('/').first())
-const heroImage = ref('/images/luxury-02.png')
 </script>
 
 <template>
@@ -20,7 +19,7 @@ const heroImage = ref('/images/luxury-02.png')
       :ui="{ wrapper: 'relative' }"
     >
       <template #top>
-        <div class="absolute inset-0 bg-cover bg-center" :style="{ backgroundImage: `url(${heroImage})` }" />
+        <div class="absolute inset-0 bg-cover bg-center" :style="{ backgroundImage: `url(${home.meta.heroImage})` }" />
         <div
           class="absolute inset-0 bg-linear-to-b from-[color-mix(in_oklab,var(--ui-bg)_1%,transparent)] via-[color-mix(in_oklab,var(--ui-bg)_75%,transparent)] to-[color-mix(in_oklab,var(--ui-bg)_1%,transparent)]"
         />
