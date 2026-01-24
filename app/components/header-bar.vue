@@ -17,7 +17,7 @@ const items = ref<NavigationMenuItem[][]>([
     <template #left>
       <NuxtLink to="/">
         <!-- <AppLogo class="w-auto h-6 shrink-0" /> -->
-        <PureBioHealthLogo class="w-auto h-15 pr-20" />
+        <!-- <PureBioHealthLogo class="w-auto h-15 pr-20" /> -->
       </NuxtLink>
     </template>
     <UNavigationMenu
@@ -37,9 +37,9 @@ const items = ref<NavigationMenuItem[][]>([
       }"
       color="info"
     />
-    <!-- <template #right>
+    <template #right>
       <UColorModeButton />
-    </template> -->
+    </template>
     <template #body>
       <UNavigationMenu :items="items" variant="link" orientation="vertical" class="space-y-2" color="info" />
     </template>
