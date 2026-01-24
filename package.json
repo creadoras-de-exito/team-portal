@@ -6,9 +6,13 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "test": "vitest",
+    "test:nuxt": "vitest --project nuxt",
+    "test:unit": "vitest --project unit",
+    "lint": "eslint --ext .js,.ts,.vue .",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test:e2e": "npx playwright install && npx playwright test"
   },
   "dependencies": {
     "@nuxt/content": "^3.11.0",
