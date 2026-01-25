@@ -5,7 +5,7 @@ description: Portal oficial del equipo con actualizaciones, recursos y anuncios.
 backgroundImage: /images/luxury-02.png
 links:
   - label: 'Únete al equipo'
-    to: '/join'
+    to: '/'
     trailingIcon: 'i-lucide-arrow-right'
     size: 'xl'
   - label: 'Más información'
