@@ -15,9 +15,18 @@ collections:
     label: 'Pages'
     files:
       - file: 'content/hero/index.md'
-        label: 'Home Page'
+        label: 'Home Page - Hero Section'
         name: 'home'
         fields:
-          - { label: 'Hero Title', name: 'heroTitle', widget: 'string' }
-          - { label: 'Hero Subtitle', name: 'heroSubtitle', widget: 'text' }
-          - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+          - { label: 'Hero Title', name: 'title', widget: 'string' }
+          - { label: 'Director', name: 'director', widget: 'string', required: false }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Background Image', name: 'backgroundImage', widget: 'image' }
+          - label: 'Links'
+            name: 'links'
+            widget: 'list'
+            fields:
+              - { label: 'Label', name: 'label', widget: 'string' }
+              - { label: 'To', name: 'to', widget: 'string' }
+              - { label: 'Trailing Icon', name: 'trailingIcon', widget: 'string', required: false }
+              - { label: 'Size', name: 'size', widget: 'select', options: ['sm', 'md', 'lg', 'xl'], default: 'md' }
