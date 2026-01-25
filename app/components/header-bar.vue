@@ -13,7 +13,7 @@ const items = ref<NavigationMenuItem[][]>([
 </script>
 
 <template>
-  <UHeader class="shadow-sm h-24">
+  <UHeader class="fixed top-0 left-0 right-0 z-50 shadow-sm h-24">
     <template #left>
       <NuxtLink to="/">
         <!-- <AppLogo class="w-auto h-6 shrink-0" /> -->
