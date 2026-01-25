@@ -7,5 +7,6 @@ const { data: home } = await useAsyncData(() => queryCollection('content').path(
     <HeroSection />
     <AboutSection />
     <AnnouncementsSection />
+    <EventsSection />
   </main>
 </template>
