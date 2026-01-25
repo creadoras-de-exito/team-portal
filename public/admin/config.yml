@@ -30,3 +30,12 @@ collections:
               - { label: 'To', name: 'to', widget: 'string' }
               - { label: 'Trailing Icon', name: 'trailingIcon', widget: 'string', required: false }
               - { label: 'Size', name: 'size', widget: 'select', options: ['sm', 'md', 'lg', 'xl'], default: 'md' }
+  - name: 'components'
+    label: 'Components'
+    files:
+      - file: 'content/components/about-section.md'
+        label: 'Home Page - About Section'
+        name: 'aboutSection'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Content', name: 'content', widget: 'markdown' }

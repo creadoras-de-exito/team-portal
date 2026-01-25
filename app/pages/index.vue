@@ -5,5 +5,6 @@ const { data: home } = await useAsyncData(() => queryCollection('content').path(
 <template>
   <main v-if="home">
     <HeroSection />
+    <AboutSection />
   </main>
 </template>
