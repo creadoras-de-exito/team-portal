@@ -152,6 +152,10 @@
   --color-green-950: #052e16;
 }
 
+:root {
+  --header-height: 6rem; /* h-24 */
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

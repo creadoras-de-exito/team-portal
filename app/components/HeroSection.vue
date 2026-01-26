@@ -32,7 +32,7 @@ const heroLinks = computed<ButtonProps[]>(() =>
 </script>
 
 <template>
-  <UPageHero v-if="hero" class="relative h-screen" :ui="{ wrapper: 'relative' }">
+  <UPageHero v-if="hero" class="relative h-[calc(100vh-var(--header-height))]" :ui="{ wrapper: 'relative' }">
     <template #top>
       <!-- Background image -->
       <div class="absolute inset-0 bg-cover bg-center" :style="{ backgroundImage: `url(${hero.backgroundImage})` }" />
