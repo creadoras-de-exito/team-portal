@@ -1,11 +1,11 @@
 <template>
-  <UApp>
+  <div class="min-h-screen flex flex-col">
     <HeaderBar />
 
-    <UMain class="min-h-[calc(100vh-var(--header-height))]">
+    <UMain class="flex-1 min-h-[calc(100vh-var(--header-height))]">
       <NuxtPage />
     </UMain>
 
     <FooterBar />
-  </UApp>
+  </div>
 </template>
