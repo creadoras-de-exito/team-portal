@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
+import { useWindowScroll } from '@vueuse/core'
+
+const { y } = useWindowScroll()
+
+const isScrolled = computed(() => y.value > 40)
 
 const items = ref<NavigationMenuItem[][]>([
   [
@@ -13,7 +18,13 @@ const items = ref<NavigationMenuItem[][]>([
 </script>
 
 <template>
-  <UHeader class="fixed top-0 left-0 right-0 z-50 shadow-sm h-24">
+  <UHeader
+    :class="[
+      'transition-all duration-300 shadow-sm h-[var(--header-height)]',
+      isScrolled ? 'h-16 bg-surface/90 shadow-md backdrop-blur' : 'h-24 bg-surface/90'
+    ]"
+    :style="{ '--header-height': isScrolled ? '4rem' : '6rem' }"
+  >
     <template #left>
       <NuxtLink to="/">
         <!-- <AppLogo class="w-auto h-6 shrink-0" /> -->
