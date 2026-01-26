@@ -47,13 +47,7 @@ useSeoMeta({
 
 <template>
   <UApp>
-    <HeaderBar />
-
-    <UMain>
-      <NuxtPage />
-    </UMain>
-
-    <FooterBar />
+    <NuxtLayout />
   </UApp>
   <!-- <ul>
     <li v-for="instrument in instruments" :key="instrument.id">
