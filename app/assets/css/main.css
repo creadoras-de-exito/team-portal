@@ -166,3 +166,16 @@
 .animate-fade-in {
   animation: fade-in 700ms ease-out both;
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(4px);
+}

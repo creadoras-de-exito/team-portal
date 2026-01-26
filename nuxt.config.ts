@@ -3,7 +3,10 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxt/eslint', '@nuxt/image', '@nuxt/ui', '@nuxt/test-utils/module'],
 
   devtools: { enabled: true },
-
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
+  },
   css: ['~/assets/css/main.css'],
 
   // Remove this if you want to default to system preference
