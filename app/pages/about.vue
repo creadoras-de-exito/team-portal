@@ -18,21 +18,21 @@
       claridad y construir resultados sostenibles sin perder su esencia.
     </p>
     <h2 class="text-3xl font-bold mb-4">Nuestros valores</h2>
-    <p class="mb-4">
-      <div class="font-bold">Fe con acción Creemos</div> 
+    <div class="mb-4">
+      <div class="font-bold">Fe con acción Creemos</div>
       <div>en Dios y actuamos con responsabilidad, disciplina y coherencia.</div>
-      <div class="font-bold">Crecimiento consciente</div> 
+      <div class="font-bold">Crecimiento consciente</div>
       <div>Elegimos crecer internamente para que los resultados externos sean sostenibles.</div>
-      <div class="font-bold">Servicio con intención</div> 
+      <div class="font-bold">Servicio con intención</div>
       <div>Acompañamos desde el respeto, la empatía y el deseo genuino de aportar valor.</div>
-      <div class="font-bold">Liderazgo humano</div> 
+      <div class="font-bold">Liderazgo humano</div>
       <div>Guiamos con el ejemplo, formando personas antes que posiciones.</div>
-      <div class="font-bold">Comunidad y unidad</div> 
+      <div class="font-bold">Comunidad y unidad</div>
       <div>Crecemos juntos, colaboramos y nos apoyamos sin competencia ni comparación.</div>
-      <div class="font-bold">Integridad y coherencia</div> 
+      <div class="font-bold">Integridad y coherencia</div>
       <div>Alineamos lo que pensamos, sentimos y hacemos.</div>
-      <div class="font-bold">Propósito y abundancia</div> 
+      <div class="font-bold">Propósito y abundancia</div>
       <div>Construimos resultados con sentido, entendiendo la abundancia como fruto del orden interno y la acción constante.</div>
-    </p>
+    </div>
   </main>
 </template>
