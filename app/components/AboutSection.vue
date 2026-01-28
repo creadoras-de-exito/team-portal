@@ -21,11 +21,12 @@
         </ul>
       </div>
 
-      <!-- Optional image -->
       <div class="flex justify-center">
-        <!-- Replace with real image later if desired -->
-        <img src="#" alt="Portrait" class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain rounded-xl shadow-lg max-w-full max-h-full" />
-        <!-- <div class="w-64 h-64 bg-gray-100 rounded-xl" /> -->
+        <img
+          src="/images/profile2_small.png"
+          alt="Portrait"
+          class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain rounded-xl shadow-lg max-w-full max-h-full"
+        />
       </div>
     </div>
   </UPageSection>
