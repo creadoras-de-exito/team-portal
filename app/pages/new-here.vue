@@ -5,6 +5,6 @@
     <NewHereHeroSection />
     <NewHereBelongingSection />
     <NewHerePathsSection />
-    <NewHereSoftCTASection />
+    <!-- <NewHereSoftCTASection /> -->
   </main>
 </template>
