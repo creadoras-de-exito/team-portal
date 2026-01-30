@@ -12,7 +12,7 @@ const submitForm = async () => {
 
   submitting.value = true
   try {
-    const res = await fetch('https://join-intent.proud-recipe-b079.workers.dev/', {
+    const res = await fetch('https://public-api.proud-recipe-b079.workers.dev/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
