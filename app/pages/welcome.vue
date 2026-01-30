@@ -7,6 +7,12 @@ const success = ref(false)
 
 const selectedPath = useState<'explore' | 'community' | 'build' | 'gifts' | null>('new-here-path')
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type'
+}
+
 const submitForm = async () => {
   if (!selectedPath.value) return
 
@@ -15,7 +21,8 @@ const submitForm = async () => {
     const res = await fetch('https://public-api.proud-recipe-b079.workers.dev/', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        ...corsHeaders
       },
       body: JSON.stringify({
         email: email.value || null,
