@@ -7,22 +7,15 @@ const success = ref(false)
 
 const selectedPath = useState<'explore' | 'community' | 'build' | 'gifts' | null>('new-here-path')
 
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type'
-}
-
 const submitForm = async () => {
   if (!selectedPath.value) return
 
   submitting.value = true
   try {
-    const res = await fetch('https://public-api.proud-recipe-b079.workers.dev/', {
+    const res = await fetch('https://public-api.proud-recipe-b079.workers.dev/join-intent', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        ...corsHeaders
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         email: email.value || null,
