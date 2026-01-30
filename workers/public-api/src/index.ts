@@ -12,16 +12,12 @@
  */
 
 import { handleJoinIntent } from './handlers/joinIntent';
-
-const corsHeaders = {
-	'Access-Control-Allow-Origin': '*',
-	'Access-Control-Allow-Methods': 'POST, OPTIONS',
-	'Access-Control-Allow-Headers': 'Content-Type',
-};
+import withCors from './utils/corsWrapper';
 
 export default {
 	async fetch(request: Request, env: Env, _ctx: ExecutionContext): Promise<Response> {
 		const url = new URL(request.url);
+		const pathname = url.pathname.replace(/\/+$/, ''); // Remove trailing slashes
 
 		console.log('Incoming request', {
 			method: request.method,
@@ -29,12 +25,12 @@ export default {
 		});
 
 		if (request.method === 'OPTIONS') {
-			return new Response(null, { headers: corsHeaders });
+			return withCors(new Response(null, { status: 204 }));
 		}
 
-		if (url.pathname === '/join-intent') {
-			return handleJoinIntent(request, env);
+		if (pathname === '/join-intent') {
+			return withCors(await handleJoinIntent(request, env));
 		}
-		return new Response('Not Found', { status: 404, headers: corsHeaders });
+		return withCors(new Response('Not Found', { status: 404 }));
 	},
 } satisfies ExportedHandler<Env>;
