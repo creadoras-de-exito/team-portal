@@ -33,10 +33,8 @@ export default {
 		}
 
 		if (url.pathname === '/join-intent') {
-			// Handle join-intent requests here
-			await handleJoinIntent(request, env);
-			return new Response('Join Intent Endpoint');
+			return handleJoinIntent(request, env);
 		}
-		return new Response('Not Found', { status: 404 });
+		return new Response('Not Found', { status: 404, headers: corsHeaders });
 	},
 } satisfies ExportedHandler<Env>;

@@ -36,11 +36,11 @@ export default {
 		}
 
 		if (request.method !== 'POST') {
-			return new Response('Method Not Allowed', { status: 405 });
+			return new Response('Method Not Allowed', { status: 405, headers: corsHeaders });
 		}
 
 		if (!request.headers.get('content-type')?.includes('application/json')) {
-			return new Response('Expected JSON', { status: 415 });
+			return new Response('Expected JSON', { status: 415, headers: corsHeaders });
 		}
 
 		// console.log('Request received:', request);
@@ -63,13 +63,13 @@ export default {
 			console.log('Received payload:', body);
 
 			if (!path) {
-				return new Response('Path is required', { status: 400 });
+				return new Response('Path is required', { status: 400, headers: corsHeaders });
 			}
 
 			const validPaths = ['explore', 'community', 'build', 'gifts'] as const;
 
 			if (!validPaths.includes(path)) {
-				return new Response('Invalid path', { status: 400 });
+				return new Response('Invalid path', { status: 400, headers: corsHeaders });
 			}
 
 			const supabase = createClient(env.SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_KEY);
