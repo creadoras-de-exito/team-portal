@@ -166,7 +166,7 @@ flowchart LR
         direction TB
         AppSrc["Nuxt 4 Source<br/>(Vue 3 + Nuxt UI + Tailwind)"]
         Content["CMS Content<br/>(Markdown)"]
-        NetlifyCfg["Netlify Configuration"]
+        CloudFlareCfg["CloudFlare Configuration"]
     end
 
     %% CMS
@@ -174,7 +174,7 @@ flowchart LR
 
     %% Build & Deploy
     subgraph Deploy["Build & Deployment"]
-        Netlify["Netlify Build System"]
+        CloudFlare["CloudFlare Build System"]
         NuxtBuild["Nuxt 4 Build Artifact<br/>Static HTML + JS + CSS"]
         CDN[(Global CDN)]
     end
@@ -191,9 +191,9 @@ flowchart LR
     CMS -->|Commits content| Content
 
     %% Build flow
-    GH -->|Triggers build| Netlify
-    Netlify -->|Builds static site| NuxtBuild
-    Netlify -->|Deploys static files| CDN
+    GH -->|Triggers build| CloudFlare
+    CloudFlare -->|Builds static site| NuxtBuild
+    CloudFlare -->|Deploys static files| CDN
 
     %% Runtime flow
     User -->|Requests pages| CDN
@@ -206,8 +206,8 @@ flowchart LR
     classDef runtime fill:#dcfce7,stroke:#166534,stroke-width:2px,color:#064e3b
     classDef deploy fill:#fff7ed,stroke:#9a3412,stroke-width:2px,color:#7c2d12
 
-    class AppSrc,Content,NetlifyCfg source
-    class NuxtBuild,Netlify,CDN deploy
+    class AppSrc,Content,CloudFlareCfg source
+    class NuxtBuild,CloudFlare,CDN deploy
     class Browser,Supa runtime
 
 ```
@@ -227,3 +227,63 @@ Inside the root directory, you can run several commands:
 - `npx playwright test --debug` - Runs the tests in debug mode.
 - `npx playwright codegen` - Auto generate tests with Codegen.
 - `npx playwright show-report` - View dashboard for tests
+
+## Cloudflare
+
+### Create a new Worker project
+
+Cloudflare CLI - https://developers.cloudflare.com/workers/get-started/guide/
+
+```bash
+npm create cloudflare@latest -- my-first-worker
+```
+
+- Hello world example
+- worker only
+- Typescript
+- `Yes` to use GitHub
+- `No` to deploy
+
+## Package commands
+
+Use for detailed information about packages used and that need updating
+
+```bash
+npx npm-check
+```
+
+Use for interactive update.
+
+```bash
+npx npm-check -u
+```
+
+Check for package updates
+
+```bash
+npx npm-check-updates
+```
+
+Update all packages
+
+```bash
+npx npm-check-updates -u
+```
+
+Using the ncu tool we can also detect which packages have newer versions:
+
+```bash
+ncu
+```
+
+To upgrade the “request” package to its newest major version, we could do the following:
+
+```bash
+ncu -u <package>
+```
+
+upgrade the `package.json` file
+
+```bash
+ncu -u
+```
