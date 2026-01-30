@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const displayImage = ref(false)
+</script>
 
 <template>
   <UPageSection>
@@ -23,10 +25,17 @@
 
       <div class="flex justify-center">
         <img
-          src="/images/profile2_small.png"
+          v-if="displayImage"
+          src="#"
           alt="Portrait"
           class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain rounded-xl shadow-lg max-w-full max-h-full"
         />
+        <div
+          v-else
+          class="mx-auto w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 bg-gray-200 rounded-xl shadow-lg flex items-center justify-center text-9xl"
+        >
+          <span class="text-gray-400">👤</span>
+        </div>
       </div>
     </div>
   </UPageSection>
